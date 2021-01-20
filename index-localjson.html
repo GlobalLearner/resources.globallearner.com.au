@@ -44,14 +44,14 @@
                 {column:"Year", dir:"asc"},
             ],
             columns:[
-            {title:"Year", field:"Year", width:69, sorter:"number"},
+                {title:"Year", field:"Year", width:69, sorter:"number"},
                 {title:"Subject", field:"Subject", width:174, sorter:"string"},
                 {title:"Date Created", field:"Date_Created", width:138, responsive:3, headerSort:false},
                 {title:"Title", field:"Title", minWidth:231, responsive:0, headerSort:false},
+                {title:"Link", field:"Link", formatter:"link", formatterParams:{label:"Download", target:"_blank", rel:"noreferrer"}, width:85, responsive:0, headerSort:false},
                 {title:"Size (MB)", field:"Size_(MB)", width:115, responsive:4},
                 {title:"File Type", field:"File_Type", width:105, responsive:2},
-                {title:"Link", field:"Link", formatter:"link", formatterParams:{label:"Download", target:"_blank", rel:"noreferrer"}, width:85, responsive:0, headerSort:false},
-                {title:"ID", field:"ID", width:69, sorter:"number", responsive:0},
+                {title:"ID", field:"ID", width:69, sorter:"number", responsive:0}
             ],
         });
         window.addEventListener('resize', function(){
