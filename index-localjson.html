@@ -47,7 +47,7 @@
             padding-right: 30px;
         }
         .navBar {
-            display: flex;
+            display: none;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
@@ -108,10 +108,17 @@
                 }
         }
     </style>
+    <script type="text/javascript">
+        function show() {
+            AB = document.getElementById('bar1');
+            AB.style.display = 'flex';
+        }
+        setTimeout("show()", 1500);
+    </script>
 </head>
 <body>
     <a class="skip-link" href="#resources-table">Skip to main</a>
-    <div class="navBar">
+    <div class="navBar" id="bar1">
         <div class="searchBar">
             <label for="fSearch">Search by Title:</label><input type="text" id="fSearch" name="fSearch">
         </div>
