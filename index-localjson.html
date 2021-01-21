@@ -23,16 +23,39 @@
         .tabulator {
             font-size: 20px;
         }
-        @media only screen 
-            and (min-device-width: 50px) 
-            and (max-device-width: 400px) 
-            and (-webkit-min-device-pixel-ratio: 1) { 
-                .tabulator{ 
-                    font-size:14px;
-                }
-                .tabulator-row .tabulator-cell {
-                    word-wrap: break-word;
-                }
+        label[for=fSearch] {
+            font-weight: bold;
+            font-size: large;
+            background: #AA7E44;
+            color: black;
+            border: 2px solid black;
+            padding: 2px 10px 2px 10px;
+        }
+        input[type=text] {
+            font-weight: 400;
+            font-size: large;
+            width: 150px;
+            border: solid black;
+            border-width: 2px 2px 2px 0px;
+            padding: 2px 10px 2px 10px;
+            color: black;
+        }
+        img[alt=logo] {
+            width: 50px;
+            display: inline;
+            margin-left: 10px;
+            padding-right: 30px;
+        }
+        .navBar {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .searchBar {
+            display: flex;
+            flex-direction: row;
+            align-items: center; 
         }
         #resources-table .tabulator-header, .tabulator-headers {
             background-color:rgb(0, 0, 0);
@@ -48,10 +71,52 @@
         #resources-table .tabulator-header .tabulator-col-row-handle {
             white-space: normal;
         }
+        @media only screen 
+            and (min-device-width: 350px) 
+            and (max-device-width: 475px) 
+            and (-webkit-min-device-pixel-ratio: 1) { 
+                .tabulator{ 
+                    font-size:14px;
+                }
+                .tabulator-row .tabulator-cell {
+                    word-wrap: break-word;
+                }
+                input[type=text] {
+                    width: 100px;
+                    font-size: 14px;
+                }
+                label[for=fSearch] {
+                    font-size: 14px;
+                }
+        }
+        @media only screen 
+            and (min-device-width: 50px) 
+            and (max-device-width: 350px) 
+            and (-webkit-min-device-pixel-ratio: 1) { 
+                .tabulator{ 
+                    font-size:14px;
+                }
+                .tabulator-row .tabulator-cell {
+                    word-wrap: break-word;
+                }
+                input[type=text] {
+                    width: 70px;
+                    font-size: 14px;
+                }
+                label[for=fSearch] {
+                    font-size: 14px;
+                }
+        }
     </style>
 </head>
 <body>
     <a class="skip-link" href="#resources-table">Skip to main</a>
+    <div class="navBar">
+        <div class="searchBar">
+            <label for="fSearch">Search by Title:</label><input type="text" id="fSearch" name="fSearch">
+        </div>
+        <img src="./images/favicon.png" alt="logo">
+    </div>
     <main id="resources-table"></main>
     <script type="text/javascript" src="node_modules/tabulator-tables/dist/js/tabulator.min.js"></script>
     <script type="text/javascript"> 
@@ -85,6 +150,23 @@
         window.addEventListener('resize', function(){
             table.redraw();
         });
+        const input = document.getElementById("fSearch");
+        input.addEventListener("keyup", function() {
+            table.setFilter(matchAny, { value: input.value });
+            if (input.value == " ") {
+                table.clearFilter()
+            }
+        });
+        function matchAny(data, filterParams) {
+            var match = false;
+            const regex = RegExp(filterParams.value, 'i');
+            for (var key in data) {
+                if (regex.test(data[key]) == true) {
+                    match = true;
+                }
+            }
+            return match;
+        }
     </script>
 </body>
 </html>
