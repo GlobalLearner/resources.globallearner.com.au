@@ -30,6 +30,9 @@
                 .tabulator{ 
                     font-size:14px;
                 }
+                .tabulator-row .tabulator-cell {
+                    word-wrap: break-word;
+                }
         }
         #resources-table .tabulator-header, .tabulator-headers {
             background-color:rgb(0, 0, 0);
@@ -72,7 +75,7 @@
                 {title:"Year", field:"Year", width:85, sorter:"number"},
                 {title:"Subject", field:"Subject", width:245, sorter:"string"},
                 {title:"Date Created", field:"Date_Created", width:160, responsive:3, headerSort:false},
-                {title:"Title", field:"Title", minWidth:100, responsive:0, headerSort:false},
+                {title:"Title", field:"Title", minWidth:100, responsive:0, formatter: 'textarea', headerSort:false},
                 {title:"Link", field:"Link", formatter:"link", formatterParams:{label:"Download", target:"_blank", rel:"noreferrer"}, width:115, responsive:0, headerSort:false},
                 {title:"Size (MB)", field:"Size_(MB)", width:150, responsive:4},
                 {title:"File Type", field:"File_Type", width:135, responsive:2},

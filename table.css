@@ -35,3 +35,6 @@
 #resources-table .tabulator-header .tabulator-col-row-handle {
     white-space: normal;
 }
+.tabulator-row .tabulator-cell a {
+    white-space: pre-wrap;
+}
