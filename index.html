@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="./images/favicon.png"/>
     <title>Resources</title>
-    <meta name="description" content="Resources for Learning Mentors at Global Learner">
-    <link href="node_modules/tabulator-tables/dist/css/tabulator.min.css" rel="stylesheet">
+    <meta name="description" content="Resources for Learning Mentors at Global Learner"/>
+    <link href="node_modules/tabulator-tables/dist/css/tabulator.min.css" rel="stylesheet"/>
     <style>
         .skip-link {
             position: absolute;
@@ -32,6 +31,20 @@
                     font-size:14px;
                 }
         }
+        #resources-table .tabulator-header, .tabulator-headers {
+            background-color:rgb(0, 0, 0);
+            color:#fff;
+        }
+        .tabulator .tabulator-header .tabulator-col {
+            background:rgb(0, 0, 0);
+        }
+        .tabulator .tabulator-header .tabulator-col.tabulator-sortable:hover {
+            background-color:rgb(0, 0, 0);
+        }
+        #resources-table .tabulator-header .tabulator-col,
+        #resources-table .tabulator-header .tabulator-col-row-handle {
+            white-space: normal;
+        }
     </style>
 </head>
 <body>
@@ -51,17 +64,18 @@
             height:"95vh",
             pagination:"local",
             paginationSize:100,
+            groupBy:"Subject",
             initialSort:[             
                 {column:"Year", dir:"asc"},
             ],
             columns:[
-                {title:"Year", field:"Year", width:79, sorter:"number"},
-                {title:"Subject", field:"Subject", width:194, sorter:"string"},
-                {title:"Date Created", field:"Date_Created", width:138, responsive:3, headerSort:false},
+                {title:"Year", field:"Year", width:85, sorter:"number"},
+                {title:"Subject", field:"Subject", width:245, sorter:"string"},
+                {title:"Date Created", field:"Date_Created", width:160, responsive:3, headerSort:false},
                 {title:"Title", field:"Title", minWidth:100, responsive:0, headerSort:false},
-                {title:"Link", field:"Link", formatter:"link", formatterParams:{label:"Download", target:"_blank", rel:"noreferrer"}, width:105, responsive:0, headerSort:false},
-                {title:"Size (MB)", field:"Size_(MB)", width:135, responsive:4},
-                {title:"File Type", field:"File_Type", width:125, responsive:2},
+                {title:"Link", field:"Link", formatter:"link", formatterParams:{label:"Download", target:"_blank", rel:"noreferrer"}, width:115, responsive:0, headerSort:false},
+                {title:"Size (MB)", field:"Size_(MB)", width:150, responsive:4},
+                {title:"File Type", field:"File_Type", width:135, responsive:2},
                 {title:"ID", field:"ID", width:69, sorter:"number", responsive:0}
             ],
         });
@@ -71,4 +85,3 @@
     </script>
 </body>
 </html>
-
