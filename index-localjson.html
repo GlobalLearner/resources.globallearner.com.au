@@ -23,22 +23,23 @@
         .tabulator {
             font-size: 20px;
         }
-        label[for=fSearch] {
+        label[for=resourceSearch] {
             font-weight: bold;
-            font-size: large;
-            background: #AA7E44;
-            color: black;
+            font-size: 20px;
+            background: #d42127;
+            color: white;
             border: 2px solid black;
             padding: 2px 10px 2px 10px;
         }
         input[type=text] {
             font-weight: 400;
-            font-size: large;
-            width: 150px;
+            font-size: 20px;
+            width: 250px;
             border: solid black;
             border-width: 2px 2px 2px 0px;
             padding: 2px 10px 2px 10px;
             color: black;
+            outline: none;
         }
         img[alt=logo] {
             width: 50px;
@@ -72,8 +73,8 @@
             white-space: normal;
         }
         @media only screen 
-            and (min-device-width: 350px) 
-            and (max-device-width: 475px) 
+            and (min-device-width: 50px) 
+            and (max-device-width: 350px) 
             and (-webkit-min-device-pixel-ratio: 1) { 
                 .tabulator{ 
                     font-size:14px;
@@ -85,13 +86,13 @@
                     width: 100px;
                     font-size: 14px;
                 }
-                label[for=fSearch] {
+                label[for=resourceSearch] {
                     font-size: 14px;
                 }
         }
         @media only screen 
-            and (min-device-width: 50px) 
-            and (max-device-width: 350px) 
+            and (min-device-width: 350px) 
+            and (max-device-width: 475px) 
             and (-webkit-min-device-pixel-ratio: 1) { 
                 .tabulator{ 
                     font-size:14px;
@@ -100,17 +101,17 @@
                     word-wrap: break-word;
                 }
                 input[type=text] {
-                    width: 70px;
+                    width: 150px;
                     font-size: 14px;
                 }
-                label[for=fSearch] {
+                label[for=resourceSearch] {
                     font-size: 14px;
                 }
         }
     </style>
     <script type="text/javascript">
         function show() {
-            AB = document.getElementById('bar1');
+            AB = document.getElementById('navBar');
             AB.style.display = 'flex';
         }
         setTimeout("show()", 1500);
@@ -118,9 +119,9 @@
 </head>
 <body>
     <a class="skip-link" href="#resources-table">Skip to main</a>
-    <div class="navBar" id="bar1">
+    <div class="navBar" id="navBar">
         <div class="searchBar">
-            <label for="fSearch">Search by Title:</label><input type="text" id="fSearch" name="fSearch">
+            <label for="resourceSearch">Search:</label><input type="text" id="resourceSearch" name="resourceSearch">
         </div>
         <img src="./images/favicon.png" alt="logo">
     </div>
@@ -136,28 +137,28 @@
             responsiveLayout:"hide", 
             placeholder: "No Data",
             layoutColumnsOnNewData:true,
-            height:"95vh",
+            //height:"90vh",
             pagination:"local",
-            paginationSize:100,
-            groupBy:"Subject",
+            paginationSize:25,
+            //groupBy:"Subject",
             initialSort:[             
                 {column:"Year", dir:"asc"},
             ],
             columns:[
-                {title:"Year", field:"Year", width:85, sorter:"number"},
-                {title:"Subject", field:"Subject", width:245, sorter:"string"},
+                {title:"Year", field:"Year", width:85, sorter:"number",responsive: 2},
+                {title:"Subject", field:"Subject", width:245, sorter:"string", responsive: 2},
                 {title:"Date Created", field:"Date_Created", width:160, responsive:3, headerSort:false},
-                {title:"Title", field:"Title", minWidth:100, responsive:0, formatter: 'textarea', headerSort:false},
+                {title:"Title", field:"Title", minWidth:220, responsive:0, formatter: 'textarea', headerSort:false},
                 {title:"Link", field:"Link", formatter:"link", formatterParams:{label:"Download", target:"_blank", rel:"noreferrer"}, width:115, responsive:0, headerSort:false},
                 {title:"Size (MB)", field:"Size_(MB)", width:150, responsive:4},
                 {title:"File Type", field:"File_Type", width:135, responsive:2},
-                {title:"ID", field:"ID", width:69, sorter:"number", responsive:0}
+                {title:"ID", field:"ID", width:69, sorter:"number", responsive:1}
             ],
         });
         window.addEventListener('resize', function(){
             table.redraw();
         });
-        const input = document.getElementById("fSearch");
+        const input = document.getElementById("resourceSearch");
         input.addEventListener("keyup", function() {
             table.setFilter(matchAny, { value: input.value });
             if (input.value == " ") {
