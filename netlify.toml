@@ -1,5 +1,10 @@
 [[redirects]]
-  from = "/*"
+  from = "/index-localjson.html"
+  to = "/"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/index-fetchjson.html"
   to = "/"
   status = 200
   force = true
