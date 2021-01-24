@@ -1,15 +1,4 @@
 [[redirects]]
   from = "/*"
   to = "/"
-  status = 200
-  force = true
-[[redirects]]
-  from = "/*.css"
-  to = "/"
   status = 301
-  force = false
-[[redirects]]
-  from = "/*.js"
-  to = "/"
-  status = 301
-  force = false
