@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="./images/logo.png"/>
+    <title>Resources</title>
+    <meta name="description" content="Resources for Learning Mentors at Global Learner"/>
+    <link rel="stylesheet" href="tabulator.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <script src='head.js'></script>
+</head>
+<body>
+    <a class="skip-link" href="#resources-table">Skip to main</a>
+    <div class="navBar" id="navBar">
+        <div class="searchBar">
+            <label for="resourceSearch">Search:</label><input type="text" id="resourceSearch" name="resourceSearch">
+        </div>
+        <img src="./images/logo.png" alt="logo">
+    </div>
+    <main id="resources-table"></main>
+    <script type="text/javascript" src="tabulator.min.js"></script>
+    <script type="text/javascript"> 
+        getJSON('https://script.google.com/macros/s/AKfycbzOJve0jFx_sdsGDE1aOcuDmVyc71onWBWNIjju5z5Pz12U7Aw/exec?id=1veTSMjElb9FcLJlsh0M5ko3iT2eOxkAF_S8JvvyMBMs&sheet=Live').then(JSONdata => {
+            var table = new Tabulator("#resources-table", {
+                ajaxLoader: false,
+                data:JSONdata, 
+                layout:"fitColumns",
+                resizableColumns:false,
+                responsiveLayout:"hide", 
+                placeholder: "No Data",
+                layoutColumnsOnNewData:true,
+                height:"90vh",
+                pagination:"local",
+                paginationSize:200,
+                groupBy:"Subject",
+                initialSort:[             
+                    {column:"Year", dir:"asc"},
+                ],
+                columns:[
+                    {title:"Year", field:"Year", width:85, sorter:"number",responsive: 2},
+                    {title:"Subject", field:"Subject", width:245, sorter:"string", responsive: 2},
+                    {title:"Date Created", field:"Date_Created", width:160, responsive:3, headerSort:false},
+                    {title:"Title", field:"Title", minWidth:220, responsive:0, formatter: 'textarea', headerSort:false},
+                    {title:"Link", field:"Link", formatter:"link", formatterParams:{label:"Download", target:"_blank", rel:"noreferrer"}, width:115, responsive:0, headerSort:false},
+                    {title:"Size (MB)", field:"Size_(MB)", width:150, responsive:4},
+                    {title:"File Type", field:"File_Type", width:135, responsive:2},
+                    {title:"ID", field:"ID", width:69, sorter:"number", responsive:1}
+                ],
+            });
+            window.addEventListener('resize', function(){
+                table.redraw();
+            });
+            // Search
+            const input = document.getElementById("resourceSearch");
+            input.addEventListener("keyup", function() {
+                table.setFilter(matchAny, { value: input.value });
+                if (input.value == " ") {
+                    table.clearFilter()
+                }
+            });
+            function matchAny(data, filterParams) {
+                var match = false;
+                const regex = RegExp(filterParams.value, 'i');
+                for (var key in data) {
+                    if (regex.test(data[key]) == true) {
+                        match = true;
+                    }
+                }
+                return match;
+            }
+        }).catch(error => {
+            console.error(error);
+        });
+    </script>
+</body>
+</html>
