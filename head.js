@@ -3,7 +3,6 @@ function show() {
     AB = document.getElementById('navBar');
     AB.style.display = 'flex';
 }
-setTimeout("show()", 500);
 const getJSON = async url => {
     try {
         const response = await fetch(url);
