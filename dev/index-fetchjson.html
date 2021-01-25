@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="tabulator.min.css"/>
     <link rel="stylesheet" href="style.css"/>
     <script src='head.js'></script>
+    <script type="text/javascript" src="tabulator.min.js"></script>
 </head>
 <body onLoad='showNavBar()'>
     <a class="skip-link" href="#resources-table">Skip to main</a>
@@ -19,7 +20,6 @@
         <img src="./images/logo.png" alt="logo">
     </div>
     <main id="resources-table"></main>
-    <script type="text/javascript" src="tabulator.min.js"></script>
     <script type="text/javascript" src="table.js"></script>
     <script type="text/javascript">
         getJSON('https://script.google.com/macros/s/AKfycbzOJve0jFx_sdsGDE1aOcuDmVyc71onWBWNIjju5z5Pz12U7Aw/exec?id=1veTSMjElb9FcLJlsh0M5ko3iT2eOxkAF_S8JvvyMBMs&sheet=Live').then(JSONdata => {
