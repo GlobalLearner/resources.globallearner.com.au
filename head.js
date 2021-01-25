@@ -1,5 +1,4 @@
-// Delay navBar if table is slow
-function show() {
+function showNavBar() {
     AB = document.getElementById('navBar');
     AB.style.display = 'flex';
 }
