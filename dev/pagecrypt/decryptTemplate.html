@@ -7,6 +7,7 @@
     <meta name="theme-color" content="#D42127"/>
     <link rel="apple-touch-icon" href="./images/logo.png">
     <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="canonical" href="https://resources.globallearner.com.au"/>
     <title>Resources</title>
     <meta name="description" content="Resources for Learning Mentors at Global Learner"/>
     <script type="text/javascript" src="tabulator.min.js"></script>
@@ -17,6 +18,7 @@
             height: 100%;
             font-family: Arial, Helvetica, sans-serif;
         }
+        
         #dialogText {
             padding: 10px 30px;
             color: white;
@@ -89,6 +91,7 @@
             border: solid gray 1px;
             float: right;
         }
+
         #contentFrame {
             position: absolute;
             top: 0;
@@ -96,6 +99,7 @@
             width: 100%;
             height: 100%;
         }
+
         #attribution {
             position: absolute;
             bottom: 0;
@@ -106,8 +110,18 @@
             font-weight: bold;
             font-size: 0.8em;
         }
+        
         #attribution, #attribution a {
             color: #999;
+        }
+
+        @media only screen 
+            and (min-device-width: 50px) 
+            and (max-device-width: 475px) 
+            and (-webkit-min-device-pixel-ratio: 1) { 
+                #mainDialog {
+                    max-width: 300px;
+                }
         }
     </style>
   </head>
