@@ -16,8 +16,8 @@ var table = new Tabulator("#resources-table", {
     ],
     columns:[
         {title:"Year", field:"Year", width:85, sorter:"number",responsive: 2},
-        {title:"Subject", field:"Subject", width:245, sorter:"string", responsive: 2},
-        {title:"Date Created", field:"Date_Created", width:160, responsive:3},
+        {title:"Subject", field:"Subject", width:265, sorter:"string", responsive: 2},
+        {title:"Date Created", field:"Date_Created", width:200, responsive:3},
         {title:"Title", field:"Title", minWidth:220, responsive:0, formatter: 'textarea'},
         {title:"Source", field: "Source", width:250, sorter:"string", responsive: 2},
         {title:"Link", field:"Link", formatter:"link", formatterParams:{label:"Download", target:"_blank", rel:"noreferrer"}, width:115, responsive:0, headerSort:false},
