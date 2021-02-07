@@ -10,10 +10,10 @@ var table = new Tabulator("#resources-table", {
     height:"90vh",
     pagination:"local",
     paginationSize:200,
-    groupBy:"Subject",
     initialSort:[             
-        {column:"Year", dir:"asc"},
+        {column:"Subject", dir:"des"},
     ],
+    groupBy:"Subject",
     columns:[
         {title:"Year", field:"Year", width:85, sorter:"number",responsive: 2},
         {title:"Subject", field:"Subject", width:265, sorter:"string", responsive: 2},
