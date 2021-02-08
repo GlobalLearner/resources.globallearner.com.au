@@ -21,7 +21,7 @@ var table = new Tabulator("#resources-table", {
         {title:"Title", field:"Title", minWidth:220, responsive:0, formatter: 'textarea'},
         {title:"Source", field: "Source", width:250, sorter:"string", responsive: 2},
         {title:"Link", field:"Link", formatter:"link", formatterParams:{label:"Download", target:"_blank", rel:"noreferrer"}, width:115, responsive:0, headerSort:false},
-        {title:"Size (MB)", field:"Size_(MB)", width:150, responsive:4},
+        {title:"Size (MB)", field:"Size_(MB)", formatter:"money",  width:150, responsive:4},
         {title:"File Type", field:"File_Type", width:135, responsive:2},
         {title:"ID", field:"ID", width:69, sorter:"number", responsive:1}
     ],
