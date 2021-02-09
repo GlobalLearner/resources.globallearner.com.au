@@ -5,7 +5,7 @@ var table = new Tabulator("#resources-table", {
     layout:"fitColumns",
     resizableColumns:false,
     responsiveLayout:"hide", 
-    placeholder: "Fetching data...",
+    placeholder:placeholder,
     layoutColumnsOnNewData:true,
     height:"90vh",
     pagination:"local",
