@@ -9,7 +9,7 @@ var table = new Tabulator("#resources-table", {
     layoutColumnsOnNewData:true,
     height:"90vh",
     pagination:"local",
-    paginationSize:200,
+    paginationSize:500,
     initialSort:[             
         {column:"Subject", dir:"des"},
     ],
