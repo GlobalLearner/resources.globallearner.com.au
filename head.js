@@ -6,7 +6,11 @@ function showNavBar() {
 
 // Load tabulator with empty JSON and placeholder. Avoids initial delay.
 var JSONdata = [];
-var placeholder = "No results found."
+var placeholder = "Fetching data...";
+function changePlaceholder () {
+    placeholderText.innerHTML = "No results found.";
+};
+
 //var placeholder = document.getElementById('placeholderText').textContent;
 
 // Fetch JSON and change placeholder

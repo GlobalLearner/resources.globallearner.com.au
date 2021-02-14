@@ -7,23 +7,26 @@ var table = new Tabulator("#resources-table", {
     responsiveLayout:"hide", 
     placeholder:placeholder,
     layoutColumnsOnNewData:true,
+    headerFilterLiveFilterDelay:0,
     height:"90vh",
     pagination:"local",
     paginationSize:500,
+    headerFilterPlaceholder:"Filter",
+    columnHeaderVertAlign:"middle",
     initialSort:[             
         {column:"Subject", dir:"des"},
     ],
     groupBy:"Subject",
     columns:[
-        {title:"Year", field:"Year", width:85, sorter:"number",responsive: 2},
-        {title:"Subject", field:"Subject", width:265, sorter:"string", responsive: 2},
-        {title:"Date Created", field:"Date_Created", width:200, responsive:3},
-        {title:"Title", field:"Title", minWidth:220, responsive:0, formatter: 'textarea'},
-        {title:"Source", field: "Source", width:250, sorter:"string", responsive: 2},
+        {title:"Year", field:"Year", width:125, sorter:"number",responsive: 2, headerFilter:"input",headerFilterPlaceholder:"Filter by Year", headerFilterFunc:"="},
+        {title:"Subject", field:"Subject", width:265, sorter:"string", responsive: 2}, //headerFilter:true,headerFilterPlaceholder:"Filter by Subject"
+        {title:"Date Created", field:"Date_Created", width:200, responsive:3}, //, headerFilter:true, headerFilterPlaceholder:"Filter by Date"
+        {title:"Title", field:"Title", minWidth:220, formatter:"textarea", responsive:0}, //, headerFilter:"input", headerFilterPlaceholder:"Filter by Title"
+        {title:"Source", field: "Source", width:250, sorter:"string", responsive: 2}, //, headerFilter:true, headerFilterPlaceholder:"Filter by Source"
         {title:"Link", field:"Link", formatter:"link", formatterParams:{label:"Download", target:"_blank", rel:"noreferrer"}, width:115, responsive:0, headerSort:false},
         {title:"Size (MB)", field:"Size_(MB)", formatter:"money",  width:150, responsive:4},
-        {title:"File Type", field:"File_Type", width:135, responsive:2},
-        {title:"ID", field:"ID", width:69, sorter:"number", responsive:1}
+        {title:"File Type", field:"File_Type", width:135, responsive:2, headerFilter:true, headerFilterPlaceholder:"Filter by Type"},
+        {title:"ID", field:"ID", width:99, sorter:"number", responsive:1, headerFilter:true, headerFilterPlaceholder:"Filter by ID", headerFilterFunc:"="} 
     ],
 });
 window.addEventListener('resize', function(){

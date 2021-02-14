@@ -9,7 +9,6 @@
     <meta name="description" content="Resources for Learning Mentors at Global Learner"/>
     <link rel="stylesheet" href="tabulator.min.css"/>
     <link rel="stylesheet" href="style.css"/>
-    <span id="placeholderText" style='display:none'>Fetching data...</span>
     <script src='head.js'></script>
     <script type="text/javascript" src="tabulator.min.js"></script>
 </head>
@@ -29,7 +28,8 @@
         }).catch(error => {
             console.error(error);
         });
-        document.getElementById("placeholderText").textContent = "No results found.";
+        var placeholderText = document.querySelector(".tabulator-placeholder > span");
+        setTimeout(changePlaceholder, 10000);
     </script>
 </body>
 </html>
