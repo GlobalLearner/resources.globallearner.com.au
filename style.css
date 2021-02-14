@@ -59,28 +59,28 @@ img[alt=logo] {
     background-color:rgb(0, 0, 0);
 }
 .tabulator .tabulator-row .tabulator-cell[tabulator-field="Year"]:hover{
-    cursor:crosshair !important;
+    cursor:default !important;
 }
 .tabulator .tabulator-row .tabulator-cell[tabulator-field="Subject"]:hover{
-    cursor:crosshair !important;
+    cursor:default !important;
 }
 .tabulator .tabulator-row .tabulator-cell[tabulator-field="Date_Created"]:hover{
-    cursor:crosshair !important;
+    cursor:default !important;
 }
 .tabulator .tabulator-row .tabulator-cell[tabulator-field="Title"]:hover{
-    cursor:crosshair !important;
+    cursor:default !important;
 }
 .tabulator .tabulator-row .tabulator-cell[tabulator-field="Source"]:hover{
-    cursor:crosshair !important;
+    cursor:default !important;
 }
 .tabulator .tabulator-row .tabulator-cell[tabulator-field="Size_(MB)"]:hover{
-    cursor:crosshair !important;
+    cursor:default !important;
 }
 .tabulator .tabulator-row .tabulator-cell[tabulator-field="File_Type"]:hover{
-    cursor:crosshair !important;
+    cursor:default !important;
 }
 .tabulator .tabulator-row .tabulator-cell[tabulator-field="ID"]:hover{
-    cursor:crosshair !important;
+    cursor:default !important;
 }
 #resources-table .tabulator-header .tabulator-col,
 #resources-table .tabulator-header .tabulator-col-row-handle {
