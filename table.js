@@ -22,7 +22,7 @@ var table = new Tabulator("#resources-table", {
         { title: "Subject", field: "Subject", width: 265, sorter: "string", responsive: 2 }, //headerFilter:true,headerFilterPlaceholder:"Filter by Subject"
         { title: "Date Created", field: "Date_Created", width: 200, responsive: 3 }, //, headerFilter:true, headerFilterPlaceholder:"Filter by Date"
         { title: "Title", field: "Title", minWidth: 220, formatter: "textarea", responsive: 0 }, //, headerFilter:"input", headerFilterPlaceholder:"Filter by Title"
-        { title: "Source", field: "Source", width: 250, sorter: "string", responsive: 2 }, //, headerFilter:true, headerFilterPlaceholder:"Filter by Source"
+        { title: "Source", field: "Source", width: 250, formatter: "textarea", sorter: "string", responsive: 2 }, //, headerFilter:true, headerFilterPlaceholder:"Filter by Source"
         { title: "Link", field: "Link", formatter: "link", formatterParams: { label: "Download", target: "_blank", rel: "noreferrer" }, width: 115, responsive: 0, headerSort: false },
         { title: "Size (MB)", field: "Size_(MB)", formatter: "money", width: 150, responsive: 4 },
         { title: "File Type", field: "File_Type", width: 135, responsive: 2, headerFilter: true, headerFilterPlaceholder: "Filter by Type" },
