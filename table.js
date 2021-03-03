@@ -20,7 +20,7 @@ var table = new Tabulator("#resources-table", {
     columns: [
         { title: "Year", field: "Year", width: 125, sorter: "number", responsive: 2, headerFilter: "input", headerFilterPlaceholder: "Filter by Year", headerFilterFunc: "=" },
         { title: "Subject", field: "Subject", width: 265, sorter: "string", responsive: 2 }, //headerFilter:true,headerFilterPlaceholder:"Filter by Subject"
-        { title: "Date Created", field: "Date_Created", width: 200, responsive: 3 }, //, headerFilter:true, headerFilterPlaceholder:"Filter by Date"
+        { title: "Date", field: "Date_Created", width: 100, responsive: 3 }, //, headerFilter:true, headerFilterPlaceholder:"Filter by Date"
         { title: "Title", field: "Title", minWidth: 220, formatter: "textarea", responsive: 0 }, //, headerFilter:"input", headerFilterPlaceholder:"Filter by Title"
         { title: "Source", field: "Source", width: 250, formatter: "textarea", sorter: "string", responsive: 2 }, //, headerFilter:true, headerFilterPlaceholder:"Filter by Source"
         { title: "Link", field: "Link", formatter: "link", formatterParams: { label: "Download", target: "_blank", rel: "noreferrer" }, width: 115, responsive: 0, headerSort: false },
