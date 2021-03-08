@@ -25,7 +25,7 @@ var table = new Tabulator("#resources-table", {
         { title: "Source", field: "Source", width: 250, formatter: "textarea", sorter: "string", responsive: 2 }, //, headerFilter:true, headerFilterPlaceholder:"Filter by Source"
         { title: "Link", field: "Link", formatter: "link", formatterParams: { label: "Download", target: "_blank", rel: "noreferrer" }, width: 115, responsive: 0, headerSort: false },
         { title: "Size (MB)", field: "Size_(MB)", formatter: "money", width: 150, responsive: 4 },
-        { title: "File Type", field: "File_Type", width: 135, responsive: 2, headerFilter: true, headerFilterPlaceholder: "Filter by Type" },
+        { title: "Format", field: "Format", width: 135, responsive: 2, headerFilter: true, headerFilterPlaceholder: "Filter by Format" },
         { title: "ID", field: "ID", width: 99, sorter: "number", responsive: 1, headerFilter: true, headerFilterPlaceholder: "Filter by ID", headerFilterFunc: "=" }
     ],
 });
