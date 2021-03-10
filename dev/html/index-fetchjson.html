@@ -7,10 +7,10 @@
     <link rel="shortcut icon" type="image/png" href="./images/logo.png"/>
     <title>Resources</title>
     <meta name="description" content="Resources for Learning Mentors at Global Learner"/>
-    <link rel="stylesheet" href="tabulator.min.css"/>
-    <link rel="stylesheet" href="style.css"/>
-    <script src='head.js'></script>
-    <script type="text/javascript" src="tabulator.min.js"></script>
+    <link rel="stylesheet" href="./css/tabulator.min.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <script src='./js/head.js'></script>
+    <script type="text/javascript" src="./js/tabulator.min.js"></script>
 </head>
 <body onLoad='showNavBar()'>
     <a class="skip-link" href="#resources-table">Skip to main</a>
@@ -21,7 +21,7 @@
         <img src="./images/logo.png" alt="logo">
     </div>
     <main id="resources-table"></main>
-    <script type="text/javascript" src="table.js"></script>
+    <script type="text/javascript" src="./js/table.js"></script>
     <script type="text/javascript">
         getJSON('https://script.google.com/macros/s/AKfycbzOJve0jFx_sdsGDE1aOcuDmVyc71onWBWNIjju5z5Pz12U7Aw/exec?id=1veTSMjElb9FcLJlsh0M5ko3iT2eOxkAF_S8JvvyMBMs&sheet=Live').then(JSONdata => {
             table.replaceData(JSONdata);
