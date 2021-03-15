@@ -147,8 +147,11 @@
             <div id="mainDialog">
                 <div id="dialogText">This page is password protected.</div>
                 <div id="passArea">
-                    <label for="pass" id="passwordPrompt">Password</label>
-                    <input id="pass" type="password" name="pass" autofocus>
+		    <form>
+		      <label for="pass" id="passwordPrompt">Password</label>
+		      <input type="text" autocomplete="username" style="display: none;">
+	              <input id="pass" type="password" name="pass"  autocomplete="current-password" autofocus>
+		    </form>
                     <div>
                         <span id="messageWrapper">
                             <span id="invalidPass" class="notifyText">Sorry, please try again.</span>
