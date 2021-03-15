@@ -13,9 +13,9 @@ var table = new Tabulator("#resources-table", {
     paginationSize: 500,
     headerFilterPlaceholder: "Filter",
     columnHeaderVertAlign: "middle",
-    initialSort: [
-        { column: "Subject", dir: "des" },
-    ],
+    //initialSort: [
+        //{ column: "Subject", dir: "des" },
+    //],
     groupBy: "Subject",
     columns: [
         { title: "Year", field: "Year", width: 125, sorter: "number", responsive: 2, headerFilter: "input", headerFilterPlaceholder: "Filter by Year", headerFilterFunc: "=" },
