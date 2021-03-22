@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <link rel="shortcut icon" type="image/png" href="./images/logo.png"/>
+    <link rel="shortcut icon" type="image/png" href="./images/logo.png" />
     <title>Resources</title>
-    <meta name="description" content="Resources for Learning Mentors at Global Learner"/>
-    <link rel="stylesheet" href="./css/tabulator.min.css"/>
-    <link rel="stylesheet" href="./css/style.css"/>
+    <meta name="description" content="Resources for Learning Mentors at Global Learner" />
+    <link rel="stylesheet" href="./css/tabulator.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <script src='./js/head.js'></script>
     <script type="text/javascript" src="./js/tabulator.min.js"></script>
 </head>
+
 <body onLoad='showNavBar()'>
     <a class="skip-link" href="#resources-table">Skip to main</a>
     <div class="navBar" id="navBar">
         <div class="searchBar">
             <label for="resourceSearch">Search:</label><input type="text" id="resourceSearch" name="resourceSearch">
+            <div class="uploadFile">
+                <form type="uploadButton" target="_blank"
+                    action="https://docs.google.com/forms/d/e/1FAIpQLSdlDkuF8zganFbg_llyAH4HUl6yvtsjAfqTHhar0QWA2IsINw/viewform?usp=sf_link">
+                    <button type="submit" for="uploadButton">Upload File</button>
+                </form>
+            </div>
         </div>
-        <div class="uploadFile">
-            <form type="uploadButton" target="_blank" action="https://docs.google.com/forms/d/e/1FAIpQLSdlDkuF8zganFbg_llyAH4HUl6yvtsjAfqTHhar0QWA2IsINw/viewform?usp=sf_link">
-                <button type= "submit" for="uploadButton">Upload File</button>
-            </form>
-        </div>
+        <img src="./images/logo.png" alt="logo">
+
     </div>
     <main id="resources-table"></main>
     <script type="text/javascript" src="./js/table.js"></script>
@@ -36,4 +41,5 @@
         setTimeout(changePlaceholder, 10000);
     </script>
 </body>
+
 </html>
