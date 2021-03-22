@@ -23,15 +23,14 @@ label[for=resourceSearch] {
     margin-bottom: 5px;
 }
 button[for=uploadButton] {
-    font-family: Times;
     font-weight: bold;
     font-size: 20px;
-    background: #d42127;
-    opacity: 70%;
-    color: white;
+    background: #000000;
+    opacity: 85%;
+    color: rgb(255, 255, 255);
     border: 2px solid black;
     padding: 2px 10px 2px 10px;
-    margin: 0 0 5px 5px;
+    margin: 0 5px 5px 0px;
 }
 button[for=uploadButton]:hover {
     cursor: pointer;
@@ -64,6 +63,11 @@ img[alt=logo] {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+.navBarLeft {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
 }
 .searchBar {
     display: flex;
@@ -145,7 +149,7 @@ img[alt=logo] {
         }
 }
 @media only screen 
-    and (max-width: 600px) 
+    and (max-width: 500px) 
     and (min-width: 0px) 
     and (-webkit-min-device-pixel-ratio: 1) { 
         button[for=uploadButton] {
