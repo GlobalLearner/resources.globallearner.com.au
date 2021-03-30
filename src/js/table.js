@@ -18,7 +18,7 @@ var table = new Tabulator("#resources-table", {
     //],
     groupBy: "Subject",
     columns: [
-        { title: "Year", field: "Year", width: 125, sorter: "number", responsive: 2, headerFilter: "input", headerFilterPlaceholder: "Filter by Year", headerFilterFunc: "=" },
+        { title: "Grade", field: "Grade", width: 125, sorter: "number", responsive: 2, headerFilter: "input", headerFilterPlaceholder: "Filter by Year", headerFilterFunc: "=" },
         // { title: "Subject", field: "Subject", width: 265, sorter: "string", responsive: 2 },
         { title: "Type", field: "Type", width: 175, responsive: 2, headerFilter: true, headerFilterPlaceholder: "Filter by Type" }, 
         { title: "Title", field: "Title", minWidth: 220, formatter: "textarea", responsive: 0 }, 
