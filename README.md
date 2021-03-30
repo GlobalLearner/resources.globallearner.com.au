@@ -1,7 +1,7 @@
 ## Resources for Learning Mentors at Global Learner
 [See the live site](https://resources.globallearner.com.au/)
 
-Made with:
+Made with ♥ using:
 
 - Backend: Google Sheets / Script
 - Database: [JSON](https://script.google.com/macros/s/AKfycbzOJve0jFx_sdsGDE1aOcuDmVyc71onWBWNIjju5z5Pz12U7Aw/exec?id=1veTSMjElb9FcLJlsh0M5ko3iT2eOxkAF_S8JvvyMBMs&sheet=Live) 
