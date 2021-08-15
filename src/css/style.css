@@ -156,6 +156,6 @@ img[alt=logo] {
             display: none;
         }
 }
-body {
+.tabulator .tabulator-tableHolder {
   overflow-x: hidden; /* Hide horizontal scrollbar */
 }
