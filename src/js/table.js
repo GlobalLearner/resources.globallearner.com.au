@@ -4,6 +4,7 @@ var table = new Tabulator("#resources-table", {
     data: JSONdata,
     layout: "fitColumns",
     resizableColumns: false,
+    groupStartOpen:false,
     responsiveLayout: "hide",
     placeholder: placeholder,
     layoutColumnsOnNewData: true,
