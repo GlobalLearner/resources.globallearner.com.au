@@ -156,3 +156,6 @@ img[alt=logo] {
             display: none;
         }
 }
+body {
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
