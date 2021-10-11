@@ -4,7 +4,6 @@ var table = new Tabulator("#resources-table", {
     data: JSONdata,
     layout: "fitColumns",
     resizableColumns: false,
-    groupStartOpen:false,
     responsiveLayout: "hide",
     placeholder: placeholder,
     layoutColumnsOnNewData: true,
@@ -18,6 +17,8 @@ var table = new Tabulator("#resources-table", {
         //{ column: "Subject", dir: "des" },
     //],
     groupBy: "Subject",
+    groupToggleElement: "header",
+    groupStartOpen: false,
     columns: [
         { title: "Grade", field: "Grade", width: 125, sorter: "number", responsive: 2, headerFilter: "input", headerFilterPlaceholder: "Filter by Year", headerFilterFunc: "=" },
         // { title: "Subject", field: "Subject", width: 265, sorter: "string", responsive: 2 },
