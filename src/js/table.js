@@ -18,7 +18,7 @@ var table = new Tabulator("#resources-table", {
     //],
     groupBy: "Subject",
     groupToggleElement: "header",
-    groupStartOpen: false,
+    groupStartOpen: true,
     columns: [
         { title: "Grade", field: "Grade", width: 125, sorter: "number", responsive: 2, headerFilter: "input", headerFilterPlaceholder: "Filter by Year", headerFilterFunc: "=" },
         // { title: "Subject", field: "Subject", width: 265, sorter: "string", responsive: 2 },
